@@ -1,0 +1,112 @@
+{% extends 'claims/base.html' %}
+
+{% block title %} List of Claim {% endblock %}
+    
+
+{% block heading %} List of Claims Created: {{ numOfClaimsList }} {% endblock %}
+
+{% block content %} 
+  
+   {% if user.is_authenticated %}
+      <div class="row">
+         <div class="col-md-12">
+         {% for claim in claimsList %} 
+         
+         <div class="card card-body" style="background-color: #51c7fb;">
+            
+            {% if claim.photo %}
+               <img src="{{ claim.photo.url }}" width="700" height="300">
+            {% endif %}
+   
+            {% if claim.pdf %}
+               <p>
+                  <a href="{{ claim.pdf.url }}" 
+                     class="btn btn-success">
+                     Link to PDF
+                  </a>
+               </p>
+            {% endif %}
+            <p>
+               Id: {{ claim.id }}
+            </p>
+
+            <p>
+               Owner: {{ claim.owner }}
+            </p>
+   
+            <p>
+               Name: {{ claim.name }}
+            </p>
+   
+            <p>
+               Email:  {{ claim.email }}
+            </p>
+   
+            <p>
+               Mobile No:  {{ claim.mobileNo }}
+            </p>
+   
+            <p>
+               Vehicle Year Make:  {{ claim.vehicleYearMake }}
+            </p>
+   
+            <p>
+               Vehicle Model:  {{ claim.vehicleModel }}
+            </p>
+   
+            <p>
+               Vehicle No:  {{ claim.vehicleNo }}
+            </p>
+   
+               <p>
+               Date:  {{ claim.date }}
+               </p>
+      
+            <p>
+               Time:  {{ claim.time }}
+            </p>
+            <p>
+               Location:  {{ claim.location }}
+            </p>
+   
+            <p>
+               Type of Loss:  {{ claim.typeOfLoss }}
+            </p>
+   
+               <p>
+               Description:  {{ claim.description }}
+               </p>
+      
+            <p>
+               Police Report Lodged:  {{ claim.isPoliceReported }}
+            </p>
+   
+            <p>
+               Is Injured:  {{ claim.isInjured }}
+            </p>
+   
+            <p style="font-weight: bold;">Update Status: {{ claim.updateStatus }}</p>
+   
+   
+            {% if claim.updateStatus != 'Accepted' %}
+               <a href="{% url 'update-form' claim.id %}" 
+               class="btn btn-primary">
+               Update
+               </a>
+   
+               <a href="{% url 'delete-form' claim.id %}" 
+                  class="btn btn-danger">
+                  Delete
+               </a>
+            {% endif %}
+         </div>
+         {% endfor %}
+         </div>
+      </div>
+   {% else %}
+   <p>
+      <h2>You need to be logged in to see all of your claims: <a href="{% url 'login' %}">Login</a></h2>
+   </p>
+   {% endif %}
+  
+{% endblock %}

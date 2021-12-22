@@ -1,0 +1,23 @@
+{% extends 'claims/base.html' %} 
+
+{% load crispy_forms_tags %}
+
+{% block title %} Claims Form {% endblock %} 
+
+{% block heading %} CREATE CLAIMS APPLICATION {% endblock %}
+
+{% block content %} 
+
+    {% if user.is_authenticated %}
+    <form method="POST" action="" 
+        enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-success">SUBMIT</button>
+    </form>
+    {% else %}
+        <p>
+            <h2>You need to be logged in to create or update claims: <a href="{% url 'login' %}">Login</a></h2>
+        </p>
+    {% endif %}
+{% endblock %}

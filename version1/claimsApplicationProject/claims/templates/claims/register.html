@@ -1,0 +1,23 @@
+{% extends 'claims/base.html' %} 
+
+{% load crispy_forms_tags %}
+
+{% block title %} Registration {% endblock %}
+
+{% block heading %} REGISTER USER ACCOUNT {% endblock %}
+
+{% block content %} 
+
+<form action="register" method="POST">
+    {% csrf_token %} 
+    {{ regForm|crispy }}
+    <button type="submit" class="btn btn-success">REGISTER</button>
+</form>
+
+<p>
+    {% for message in messages %}
+        <h3>{{ message }}</h3>
+    {% endfor %}
+</p>
+
+{% endblock %}
