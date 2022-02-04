@@ -54,3 +54,5 @@ $ ./manage.py shell
 * [ ] Implement front-end frameworks/libraries, i.e: React.
 
 * [ ] Add custom scripts to automate some stuffs (i.e: updating records in DB).
+
+* [ ] Deploy this project/app onto Heroku, Azure or other platforms.
