@@ -49,7 +49,7 @@ $ ./manage.py shell
 
 * [ ] Implement [DRF Routers](https://www.django-rest-framework.org/api-guide/routers/) for URLS.
 
-* [ ] Implement unit-testing for views.
+* [ ] Implement unit-testing for views (using [APITestCase](https://www.django-rest-framework.org/api-guide/testing/#api-test-cases) from DRF and [model_mommy](https://model-mommy.readthedocs.io/en/latest/basic_usage.html)).
 
 * [ ] Implement front-end frameworks/libraries, i.e: React.
 
