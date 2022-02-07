@@ -47,7 +47,7 @@ $ ./manage.py shell
 
 * [ ] Add class-based views.
 
-* [ ] Implement [DRF Routers](https://www.django-rest-framework.org/api-guide/routers/) for URLS.
+* [ ] Implement [DRF Router](https://www.django-rest-framework.org/api-guide/routers/) for mapping of URL with views.
 
 * [ ] Implement unit-testing for views (using [APITestCase](https://www.django-rest-framework.org/api-guide/testing/#api-test-cases) from DRF and [model_mommy](https://model-mommy.readthedocs.io/en/latest/basic_usage.html)).
 
