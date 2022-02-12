@@ -56,3 +56,5 @@ $ ./manage.py shell
 * [ ] Add custom scripts to automate some stuffs (i.e: updating records in DB).
 
 * [ ] Deploy this project/app onto Heroku, Azure or other platforms.
+
+* [ ] Setup Github Actions YAML file for automating integration testing.
