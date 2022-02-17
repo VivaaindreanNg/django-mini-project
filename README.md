@@ -58,3 +58,5 @@ $ ./manage.py shell
 * [ ] Deploy this project/app onto Heroku, Azure or other platforms.
 
 * [ ] Setup Github Actions YAML file for automating integration testing.
+
+* [ ] Add codecoverage tools in Github Action's workflow.
