@@ -1,4 +1,4 @@
-# django-mini-project
+# Django Mini Project
 A mini project of implementing basic CRUD functionalities using Django framework. It should contain the following:
 
 ### Installing
