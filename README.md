@@ -63,3 +63,5 @@ $ ./manage.py shell
 * [ ] Setup Github Actions YAML file for automating integration testing.
 
 * [ ] Add codecoverage tools in Github Action's workflow.
+
+* [ ] Setup Docker for this project.
