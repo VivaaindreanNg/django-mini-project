@@ -46,7 +46,7 @@ $ ./manage.py shell
 ```
 
 
-### To-do:
+### List of TODOs:
 
 * [ ] Add class-based views.
 
