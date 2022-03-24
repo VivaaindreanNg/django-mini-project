@@ -64,4 +64,6 @@ $ ./manage.py shell
 
 * [ ] Add codecoverage tools in Github Action's workflow.
 
+* [ ] Setup Webhook in Django.
+
 * [ ] Setup Docker for this project.
