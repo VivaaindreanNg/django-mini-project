@@ -67,3 +67,5 @@ $ ./manage.py shell
 * [ ] Setup Webhook in Django.
 
 * [ ] Setup Docker for this project.
+
+* [ ] Implement service layer (Based on Two Scoops of Django).
